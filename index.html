@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Webfundamentals by YOTOV-LIMITED</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Webfundamentals</h1>
+      <h2 class="project-tagline">Best practices for modern web development</h2>
+      <a href="https://github.com/YOTOV-LIMITED/WebFundamentals" class="btn">View on GitHub</a>
+      <a href="https://github.com/YOTOV-LIMITED/WebFundamentals/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/YOTOV-LIMITED/WebFundamentals/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="web-fundamentals--" class="anchor" href="#web-fundamentals--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web Fundamentals  <a href="https://ci.cloudware.io/google/WebFundamentals"><img src="https://ci.cloudware.io/api/badges/google/WebFundamentals/status.svg" alt="Build Status"></a>
+</h1>
+
+<p><code>master</code> staging: <a href="https://master-dot-web-central.appspot.com/web/">https://master-dot-web-central.appspot.com/web/</a></p>
+
+<hr>
+
+<p>Web Fundamentals is a technical documentation center for multi-device web
+development.  Our goal is to build a resource for modern web developers
+that’s as curated and thorough as developer.android.com or iOS Dev Center.</p>
+
+<h1>
+<a id="installing-dependencies" class="anchor" href="#installing-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing Dependencies</h1>
+
+<p>To build and run this project you need to have Ruby, Node and NPM.</p>
+
+<h2>
+<a id="mac" class="anchor" href="#mac" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mac</h2>
+
+<ol>
+<li>Install <a href="https://developer.apple.com/xcode/downloads/">XCode Command Line Tools</a>
+</li>
+<li>Install node
+
+<ul>
+<li><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+</ul>
+</li>
+<li>Install <a href="https://rvm.io/rubies/default">RVM</a>
+
+<ul>
+<li><code>curl -sSL https://get.rvm.io | bash</code></li>
+</ul>
+</li>
+<li>Set RVM Default to 2.2.0
+
+<ul>
+<li><code>rvm install ruby-2.2.0</code></li>
+<li><code>rvm --default use 2.2.0</code></li>
+</ul>
+</li>
+<li>Install <a href="http://pygments.org/">Pygments</a>
+
+<ul>
+<li><code>easy_install pygments</code></li>
+</ul>
+</li>
+<li>Install bundler
+
+<ul>
+<li><code>gem install bundler</code></li>
+</ul>
+</li>
+<li>Install <a href="https://rubygems.org/">RubyGems</a> dependencies (<a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://kramdown.gettalong.org/">Kramdown</a>)
+
+<ul>
+<li><code>rvm . do bundle install</code></li>
+</ul>
+</li>
+<li>Install the <a href="http://gulpjs.com/">Gulp CLI</a>
+
+<ul>
+<li><code>npm install -g gulp</code></li>
+</ul>
+</li>
+<li>Install <a href="https://www.npmjs.org">npm</a> dependencies
+
+<ul>
+<li><code>npm install</code></li>
+</ul>
+</li>
+<li>Get the <a href="https://cloud.google.com/appengine/downloads">App Engine SDK</a> and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, <code>$ PATH=./google_appengine:$PATH</code>)</li>
+</ol>
+
+<h1>
+<a id="running-the-site" class="anchor" href="#running-the-site" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running the site</h1>
+
+<p>To run the site:</p>
+
+<pre><code>gulp
+</code></pre>
+
+<p>This will compile styles &amp; javascript and build the site with Jekyll. If thats
+all working, it will start a server on port 7331 (which you can reach at
+<a href="http://localhost:7331/web/">http://localhost:7331/web/</a>).</p>
+
+<p>Any changes to files will result in the appropriate tasks be running in gulp.</p>
+
+<h2>
+<a id="faster-jekyll-builds" class="anchor" href="#faster-jekyll-builds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Faster Jekyll Builds</h2>
+
+<p>To make the build faster you can define a language and/or section of the site
+be built.</p>
+
+<p>If you want to build a single language then run this:</p>
+
+<pre><code>gulp --lang en
+</code></pre>
+
+<p>If you want to build a specific section then run this:</p>
+
+<pre><code>gulp --section shows
+</code></pre>
+
+<p>These can be combined like so:</p>
+
+<pre><code>gulp --lang en --section shows
+</code></pre>
+
+<h2>
+<a id="learning-more-about-jekyll-and-liquid-used" class="anchor" href="#learning-more-about-jekyll-and-liquid-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Learning More About Jekyll and Liquid Used</h2>
+
+<p>We have a styleguide which you can access at <a href="http://localhost:7331/web/resources/styleguide/">http://localhost:7331/web/styleguide/</a> that should get you up and running with a lot of the custom and useful info.</p>
+
+<h1>
+<a id="translations" class="anchor" href="#translations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Translations</h1>
+
+<p>See <a href="TRANSLATION.md">our translations guide</a></p>
+
+<h1>
+<a id="building-shows" class="anchor" href="#building-shows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building Shows</h1>
+
+<p>You need the python <a href="https://developers.google.com/api-client-library/python/start/installation">Google API client</a></p>
+
+<p>For Linux:</p>
+
+<pre><code>pip install --upgrade google-api-python-client
+</code></pre>
+
+<h1>
+<a id="content-plan" class="anchor" href="#content-plan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Content plan</h1>
+
+<p>Content plan for Web Fundamentals is tracked through GitHub Issues and our <a href="http://goo.gl/nWDD0M">Site Structure + Content Inventory</a> doc</p>
+
+<h1>
+<a id="release-status" class="anchor" href="#release-status" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release status</h1>
+
+<p>The project was soft launched in late April with a formal v1 launch in June 2014.  We've now moved to a six-week rolling release cycle.</p>
+
+<h1>
+<a id="project-structure" class="anchor" href="#project-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Structure</h1>
+
+<p>This is a Jekyll build.</p>
+
+<pre><code>/appengine-config - The server to host the static content
+/gulp-tasks - The tasks available to Gulp split by responsibility (styles, scripts etc.)
+/src - The documentation
+  /content - The content in each language
+    /en - The base language folder. Sub folders are sections of the site
+      /fundamentals
+      /showcase
+      /shows
+      ...etc...
+    /&lt;langcode&gt; - Overrides for that language, following the en structure.
+  /jekyll -
+    /_config - These are files which define specific settings for the setup of the page
+    /_data - These are static strings and their translations
+    /_includes - These a snippets of HTML you can include in a page
+    /_layouts - There are layouts you can reference in the YAML of your doc
+    /_plugins - This is the guts of Web Fundamentals.
+  /static
+    /imgs - Images used in Web Fundamentals
+    /scripts - Javascript - not used in final deployment of WF only local
+    /styles - Sass for web fundamentals
+    /third_party
+  /tests
+  /tools
+</code></pre>
+
+<p>The site is generated in <code>/build</code>, which is never checked in.</p>
+
+<h1>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h1>
+
+<p>Web Fundamentals is an open source project and we welcome your contributions!
+Before submitting a pull request, please review <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
+and make sure that there is an issue filed describing the fix or new content.
+If you don't complete these steps, we won't be able to accept your pull request, sorry.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/YOTOV-LIMITED/WebFundamentals">Webfundamentals</a> is maintained by <a href="https://github.com/YOTOV-LIMITED">YOTOV-LIMITED</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
